@@ -1,0 +1,21 @@
+{
+  "name": "swagger-cleaner",
+  "version": "0.0.1",
+  "license": "MIT",
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3",
+    "json-stable-stringify": "^1.0.1",
+    "node-fetch": "^2.6.0"
+  },
+  "scripts": {
+    "start": "node clean.js",
+    "build": "ncc build clean.js --out dist/"
+  },
+  "description": "Command line tool and utility for cleaning up (not only) swagger.json files. Used for better comparison and diff of your swagger.",
+  "main": "dist/index.js",
+  "files": [
+    "build/*.js"
+  ],
+  "repository": "git@github.com:dhlavaty/swagger-cleaner.git",
+  "author": "Dusan Hlavaty <dhlavaty@gmail.com>"
+}
