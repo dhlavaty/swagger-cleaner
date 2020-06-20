@@ -46,9 +46,12 @@ function removeExample(obj) {
   }
 }
 
+const packageJson = require("./package.json");
+
 if (process.argv.length < 3) {
   console.log(
-    `Usage:
+    `swagger-cleaner ${packageJson.version}
+Usage:
        swagger-cleaner <url>
        swagger-cleaner <url> --save-raw raw-file.json
        swagger-cleaner <url> --save-raw raw-file.json --keep-examples
